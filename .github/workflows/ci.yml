@@ -214,6 +214,12 @@ jobs:
           miniforge-version: "latest"
           use-mamba: true
         if: ${{ ! contains(matrix.OS_NAME, 'Linux') }}
+
+      - name: conda list
+        run: |
+          which mamba
+          which conda
+          mamba list
       
       - name: Patch license for Mambaforge deprecation
         if: matrix.MINIFORGE_NAME == 'Mambaforge' || matrix.MINIFORGE_NAME == 'Mambaforge-pypy3'
