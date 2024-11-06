@@ -217,7 +217,6 @@ jobs:
 
       - name: conda list
         run: |
-          which mamba
           which conda
           mamba list
       
