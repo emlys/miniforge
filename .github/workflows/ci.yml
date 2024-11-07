@@ -212,8 +212,10 @@ jobs:
       - uses: conda-incubator/setup-miniconda@a4260408e20b96e80095f42ff7f1a15b27dd94ca # v3.0.4
         with:
           # miniforge-version: "latest"
-          use-mamba: true
+          # use-mamba: true
           mamba-version: "*"
+          channels: conda-forge,defaults
+
         if: ${{ ! contains(matrix.OS_NAME, 'Linux') }}
 
       - name: conda list
