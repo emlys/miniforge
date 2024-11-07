@@ -222,6 +222,7 @@ jobs:
         run: |
           which conda
           mamba list
+          mamba uninstall conda
       
       - name: Patch license for Mambaforge deprecation
         if: matrix.MINIFORGE_NAME == 'Mambaforge' || matrix.MINIFORGE_NAME == 'Mambaforge-pypy3'
